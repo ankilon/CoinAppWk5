@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedActivity">
+
+    <ImageButton
+        android:id="@+id/searchButton"
+        android:layout_width="51dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mainIcon"
+        app:srcCompat="@android:drawable/ic_search_category_default" />
+
+    <ImageView
+        android:id="@+id/mainIcon"
+        android:layout_width="112dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="164dp"
+        android:layout_height="27dp"
+        android:text="Title"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintBottom_toTopOf="@+id/symbol"
+        app:layout_constraintStart_toStartOf="@+id/symbol" />
+
+    <TextView
+        android:id="@+id/symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:text="ABB"
+        app:layout_constraintBottom_toTopOf="@+id/value"
+        app:layout_constraintEnd_toEndOf="@+id/value"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/value" />
+
+    <TextView
+        android:id="@+id/valueusd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Value (USD)"
+        app:layout_constraintEnd_toEndOf="@+id/mainIcon"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="@+id/mainIcon"
+        app:layout_constraintTop_toBottomOf="@+id/mainIcon" />
+
+    <TextView
+        android:id="@+id/change1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Change (1h)"
+        app:layout_constraintStart_toStartOf="@+id/valueusd"
+        app:layout_constraintTop_toBottomOf="@+id/valueusd" />
+
+    <TextView
+        android:id="@+id/change24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Change (24h)"
+        app:layout_constraintStart_toStartOf="@+id/change1"
+        app:layout_constraintTop_toBottomOf="@+id/change1" />
+
+    <TextView
+        android:id="@+id/change7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Change (7d)"
+        app:layout_constraintStart_toStartOf="@+id/change24"
+        app:layout_constraintTop_toBottomOf="@+id/change24" />
+
+    <TextView
+        android:id="@+id/marketcapTitle"
+        android:layout_width="71dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Marketcap"
+        app:layout_constraintStart_toStartOf="@+id/change7"
+        app:layout_constraintTop_toBottomOf="@+id/change7" />
+
+    <TextView
+        android:id="@+id/volume24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Volume (24h)"
+        app:layout_constraintStart_toStartOf="@+id/marketcapTitle"
+        app:layout_constraintTop_toBottomOf="@+id/marketcapTitle" />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:text="Error"
+        app:layout_constraintBottom_toBottomOf="@+id/valueusd"
+        app:layout_constraintStart_toEndOf="@+id/valueusd"
+        app:layout_constraintTop_toTopOf="@+id/valueusd"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/change1h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Error"
+        app:layout_constraintStart_toStartOf="@+id/value"
+        app:layout_constraintTop_toBottomOf="@+id/value" />
+
+    <TextView
+        android:id="@+id/change24h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Error"
+        app:layout_constraintStart_toStartOf="@+id/change1h"
+        app:layout_constraintTop_toBottomOf="@+id/change1h" />
+
+    <TextView
+        android:id="@+id/change7d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Error"
+        app:layout_constraintStart_toStartOf="@+id/change24h"
+        app:layout_constraintTop_toBottomOf="@+id/change24h" />
+
+    <TextView
+        android:id="@+id/marketcap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Error"
+        app:layout_constraintStart_toStartOf="@+id/change7d"
+        app:layout_constraintTop_toBottomOf="@+id/change7d" />
+
+    <TextView
+        android:id="@+id/volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Error"
+        app:layout_constraintStart_toStartOf="@+id/marketcap"
+        app:layout_constraintTop_toBottomOf="@+id/marketcap" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
